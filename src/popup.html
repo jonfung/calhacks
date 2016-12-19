@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <title>Getting Started Extension's Popup</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Open+Sans|Raleway">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="diffbot.js"></script>
+    <script src="article-detection.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="popup.js"></script>
+    <style type="text/css">
+    html {
+        width: 400px;
+        /*padding: 0px 15px;*/
+    }
+
+    body {
+        font-family: 'Open Sans', Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 100%;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .progress {
+        margin-bottom: 0px;
+    }
+
+    .author-label {
+        padding-top: 5px;
+        padding-right: 5px;
+        text-align: right;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h2 id="header-text">This article's objectivity:</h2>
+        <div id="article-hover" class="progress" data-toggle="tooltip" title="loading">
+            <div id="article-bar" class="progress-bar" role="progressbar" aria-valuenow="70"
+                aria-valuemin="0" aria-valuemax="100" style="width:00%">
+                <span class="sr-only">70% Complete</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 id="author">Author: </h2>
+        <table style="width:100%">
+            <tr>
+                <td width="17%" class="author-label"><p>Objectivity</p></td>
+                <td>
+                    <div id="obj-hover" class="progress" data-toggle="tooltip" title="loading">
+                        <div id="author-obj-bar" class="progress-bar" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="width:00%">
+                            <span class="sr-only">70% Complete</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="author-label"><p>Openness</p></td>
+                <td>
+                    <div id="openness-hover" class="progress" data-toggle="tooltip" title="loading">
+                        <div id="author-open-bar" class="progress-bar" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="width:00%">
+                            <span class="sr-only">70% Complete</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="author-label"><p>Topics</p></td>
+                <td>
+                    <div id="stacked-bar" class="progress" data-toggle="tooltip" title="loading">
+                        <div id="topic1-bar" class="progress-bar progress-bar-info" role="progressbar" style="width:0%" data-toggle="tooltip" title="loading">
+                            <span class="sr-only">70% Complete</span>
+                        </div>
+                        <div id="topic2-bar" class="progress-bar progress-bar-warning" role="progressbar" style="width:0%" data-toggle="tooltip" title="loading">
+                            <span class="sr-only">70% Complete</span>
+                        </div>
+                        <div id="topic3-bar" class="progress-bar progress-bar-success" role="progressbar" style="width:0%" data-toggle="tooltip" title="loading">
+                            <span class="sr-only">70% Complete</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="container" style="padding-bottom:10px;">
+        <table style="width:100%">
+            <tr>
+                <td style="padding-bottom:8px; width:24%"><h2 id="feedback-text">Feedback:</h2></td>
+                <td class="btn-holder" style="width:38%"><button type="button" class="btn btn-success" style="width:95%">I agree</button></td>
+                <td class="btn-holder" style="width:38%"><button type="button" class="btn btn-danger" style="width:95%">I disagree</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+
+</html>
